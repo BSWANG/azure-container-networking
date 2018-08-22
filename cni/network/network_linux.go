@@ -101,3 +101,10 @@ func getNetworkDNSSettings(nwCfg *cni.NetworkConfig, result *cniTypesCurr.Result
 func getEndpointDNSSettings(nwCfg *cni.NetworkConfig, result *cniTypesCurr.Result, namespace string) (network.DNSInfo, error) {
 	return getNetworkDNSSettings(nwCfg, result, namespace)
 }
+
+func updateSubnetPrefix(cnsNetworkConfig *cns.GetNetworkContainerResponse, subnetPrefix *net.IPNet) {
+}
+
+func getNetworkName(podName, podNs, ifName string, nwCfg *cni.NetworkConfig) (string, error) {
+	return nwCfg.Name, nil
+}
